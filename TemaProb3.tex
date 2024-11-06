@@ -35,6 +35,16 @@ Presupunearea facuta este falsa, asadar arcele din coada $L_h$ sunt ordonate cum
 
 \textbf{Exercitiul 3. (a3) }
 
+Algoritmul adauga arcele in cozi : $if (a_{si} = y_h)$ then $L_h.push(si)$
+
+La fiecare iteratie din bucla $while$ : un nod $j^*$ este ales si adaugat la $S$, toate arcele $(j^*,j)$ catre noduri $j \notin S$ si care au cost $y_h$ sunt adaugate in $L_h$.
+
+Cum se mentine structura la fiecare iteratie : un nod $j^*$ este in inclus in $S$, ne asiguram ca toate arcele incidente $(j^*,j)$, $j \notin S$ si $a_{j*j} = y_h$ sunt adaugate in $L_h$. In fiecare moment, daca avem $(i,j)$ cu $i \in S$, $j \notin S$ si $a_{i*j} = y_h$, atunci $(i,j)$ prezent in $L_h$.
+
+Asadar, se verifica proprietatea ceruta.
+
+\textbf{Exercitiul 3. (a4) }
+
 
 \end{document}
 
