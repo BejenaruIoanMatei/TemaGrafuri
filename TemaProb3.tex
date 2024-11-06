@@ -45,6 +45,31 @@ Asadar, se verifica proprietatea ceruta.
 
 \textbf{Exercitiul 3. (a4) }
 
+Pentru a verifica proprietatea voi folosi o demonstratie prin inductie asupra iteratiilor algoritmului.
+
+\textbf{Cazul de baza, P(0)} : $S=[s]$ (avem doar nodul de start), iar $u_S=0$
+
+$\forall j$ adiancent cu $s$, $u_j$ = $a_{sj}$ (care este costul arcelor directe din $s$ catre $j$)
+
+Prima iteratie : se alege $(s,j)$ pentru care $a_{sj}$ minim (nodul $j$ adaugat la $S$, $j$ are cel mai mic cost de drum de la $s$)
+
+Asadar, am demonstrat ca primul pas este \textbf{adevarat} (cazul de baza, $P(0)$)
+
+\textbf{Ipoteza de inductie, P(k)} : presupunem ca afirmatia este adevarata pentru primele \textbf{k} iteratii ale alg.
+
+\textbf{Pasul de inductie, P(k+1)} : la iteratia \textbf{k+1} vom selecta un nou nod $j^* \notin S$ si il vom adauga in $S$
+
+$Search()$ verifica toate arcele $(i,j)$ cu $i \in S$ si $j \notin S$ si cauta arcul care minimizeaza $u_i + a_{ij}$
+
+Deci o sa avem : $u_j$ =min[$u_i+a_{ij}$ cu $i \in S$ si $j \notin S$], am folosit '[ . . . ]' pentru ideea de multime
+
+Prin alegerea lui $(i,j^*)$ cu costul minim $u_i + a_{ij}$, alg. garanteaza ca $u_{j^*}$ este costul minim de la $s$ la $j^*$
+
+Sa presupunem prin \textbf{reducere la absurd}, in pasul \textbf{k+1} alegerea facuta nu da costul minim $u_{j^*}$. Atunci ar exista un $j' \notin S$ si un drum catre $j'$ cu $u_{j'} < u_{j^*}$. \textbf{CONTRADICTIE}, pentru ca un astfel de $j'$ trebuia ales inaintea lui $j^*$, lucru ce contrazice ipoteza ca $j^*$ a fost ales ca minim. (existenta lui $j'$ contrazice si modul de constructie al algoritmului si modul de selectia al lui $Search()$).
+
+Asadar, am demonstrat ca $u_{j^*}$ este min in acea iteratie. (a4) demonstrat
+
+\textbf{Exercitiul 3. (b) }
 
 \end{document}
 
