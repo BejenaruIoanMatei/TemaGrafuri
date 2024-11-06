@@ -22,6 +22,19 @@ Asadar, nodurile sunt adaugate la $S$ in ordine crescatoare a costurilor minime.
 
 \textbf{Exercitiul 3. (a2) }
 
+Presupunem ca exista doua arce $(i,j)$ si $(i',j')$ in $L_h$ pentru care costul minim pana la nodul $i$ este mai mic decat costul minim pana la nodul $i'$, adica $u_i < u_{i'}$, dar in $L_h$ arcul $(i',j')$ apare inaintea lui $(i,j)$.
+
+Algoritmul $Dijkstra$ adauga nodurile in $S$ in ordine crescatoare a costurilor $u$. Asta inseamna ca un nod $i$ pt. care $u_i < u_{i'}$ va fi adaugat in $S$ inaintea lui $i'$
+
+Daca $u_i < u_{i'}$, atunci $(i,j)$ va fi adaugat inaintea lui $(i',j')$ pt ca in $S$ adaugam $i$.
+
+Conform presupunerii, $(i',j')$ apare inaintea lui $(i,j)$, ceea ce inseamna ca $i'$ a fost procesat inainte lui $i$. \textbf{IMPOSIBIL}, pentru ca stim ca $u_i < u_{i'}$ si ca nodurile sunt adaugate in $S$ in ordinea costurilor minime. 
+
+Contradictie, nu putem avea $u_i < u_{i'}$ si $i'j'$ inaintea lui $ij$ in coada.
+Presupunearea facuta este falsa, asadar arcele din coada $L_h$ sunt ordonate cum trebuie, in ordine crescatoare a costurilor minime $u$.
+
+\textbf{Exercitiul 3. (a3) }
+
 
 \end{document}
 
