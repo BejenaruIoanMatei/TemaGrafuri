@@ -70,6 +70,10 @@ Sa presupunem prin \textbf{reducere la absurd}, in pasul \textbf{k+1} alegerea f
 Asadar, am demonstrat ca $u_{j^*}$ este min in acea iteratie. (a4) demonstrat
 
 \textbf{Exercitiul 3. (b) }
+$Search()$ in cel mai rau caz are complexitate : $O(p+m)$, $O(p)$ operatii de parcurgere a listelor si $O(m)$ operatii pe arce. Bucla principala while ruleaza de $n$ ori, deci $O(n*(p+m))$
 
+Avem urmatoarea suma de complexitati : 
+
+$O(p)$ + $O(n*p)$ + $O(n*(p+m))$ + $O(m)$ = $O(n*(p+m))$ = $O(n*p+n*m)$, unde $n$ = nr de noduri, $m$ = nr de muchii, $p$ = nr de clase de cost
 \end{document}
 
