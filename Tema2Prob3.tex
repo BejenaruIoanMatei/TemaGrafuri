@@ -1,0 +1,25 @@
+\documentclass{article} 
+\usepackage{tikz} 
+\usepackage{graphicx}
+\usepackage{caption}
+\begin{document} 
+
+\textbf{Exercitiul 3. (a) }
+
+Fie $T$ un arbore partial al grafului $G$ care contine muchia $e=xy$. Costul lui $T$ este : $\sum_{e' \in T} c(e')$
+
+Contractarea unei muchii $e=xy$ elimina $e$ din arborele $T$. Prin urmare, multimea muchiilor lui $T$ este : $T|e=T\setminus{e}$
+
+$c(T|e)$ = $\sum_{e' \in T|e} c(e')$ = $\sum_{e' \in T} c(e')$ - $c(e)$ . Dar stim ca $\sum_{e' \in T} c(e')$ = $c(T)$ 
+Asadar, $c(T|e)=c(T)-c(e)$
+
+\textbf{Exercitiul 3. (b) }
+
+Din punctul $a)$, avem ca $c(T|e) = c(T) - c(e)$, similar costul lui $T'|e$ din $G|e$ este : $c(T'|e) = c(T') - c(e)$
+
+$T$ este un arbore de cost minim in $G$, deci satisface $c(T)\leq c(T')$ , $\forall T'$ in $G$
+
+Relatia $c(T|e) = c(T) - c(e)$ este valabila si pentru orice alt arbore $T'|e$ obtinut prin contractare.
+
+Avem $c(T)\leq c(T')$ $| -c(e)$, obtinem $c(T) - c(e) \leq c(T') - c(e)$. Asadar, $c(T|e)\leq c(T'|e)$ ceea ce inseamna ca pentru orice arbore $T'|e$ din $G|e$, avem ca $T|e$ este un arbore partial de cost minim al grafului $G|e$ .
+\end{document}
